@@ -1,7 +1,7 @@
 <mat-sidenav-container class="start-container">
   <mat-sidenav #sidenav mode="over">
     <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
-    <p><button mat-button>Video</button></p>
+    <p><mat-button-toggle>Video</mat-button-toggle></p>
     <mat-sidenav class="nested-sidenav" #nestedSidenav>
       <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
     </mat-sidenav>
