@@ -1,18 +1,4 @@
-<mat-sidenav-container class="start-container">
-  <mat-sidenav #sidenav mode="over">
-    <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
-    <p><mat-button-toggle>Video</mat-button-toggle></p>
-    <mat-sidenav class="nested-sidenav" #nestedSidenav>
-      <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
-    </mat-sidenav>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="material-icons" (click)="sidenav.toggle()">menu</div>
-    <div style="text-align:center">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-      <img width="818" alt="Angular Logo" src="../assets/pictures/logo.svg">
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<nav>
+  <a routerLink="/start">Go to start!</a>
+</nav>
+<router-outlet></router-outlet>
