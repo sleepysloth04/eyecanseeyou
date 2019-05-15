@@ -1,13 +1,13 @@
 <mat-sidenav-container class="start-container">
   <mat-sidenav #sidenav mode="over">
     <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
-    <p><mat-button-toggle>Video</mat-button-toggle></p>
+    <p><mat-button-toggle (click)="mail = !mail">Mail</mat-button-toggle></p>
     <mat-sidenav class="nested-sidenav" #nestedSidenav>
       <div class="material-icons" (click)="nestedSidenav.toggle()">menu</div>
     </mat-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="material-icons" (click)="sidenav.toggle()">menu</div>
-    <ng-template appContent></ng-template>
+    <app-start *ngIf="!mail"></app-start>
   </mat-sidenav-content>
 </mat-sidenav-container>
